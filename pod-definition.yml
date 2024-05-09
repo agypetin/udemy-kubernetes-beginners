@@ -1,0 +1,27 @@
+# Kind         | Version
+# ______________________
+# POD         | v1
+# Service     | v1
+# ReplicaSet  | apps/v1
+# Deployment  | apps/v1
+
+# basic prop apiVersion, kind, metadata, spec
+apiVersion: v1
+# the type of object we are trying to create
+# value: POD, Service, ReplicaSet, Deployment
+kind: Pod
+# The metadata is data about the object like its name labels etc.
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+    type: front-end
+# provide additional information to Kubernetes pertaining to that object.
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+
+# Commands
+# kubectl get pods
+# kubectl describe pod myapp-pod
