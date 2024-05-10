@@ -1,5 +1,5 @@
 # get pods from defult namespace
-kubctl get pods
+kubectl get pods
 
 # create a pod
 kubectl run nginx --image=nginx
