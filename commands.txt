@@ -1,0 +1,20 @@
+# get pods from defult namespace
+kubctl get pods
+
+# create a pod
+kubectl run nginx --image=nginx
+
+# get pod details
+kubectl describe pod <pod_name>
+
+# nodes details
+kubectl get pods -o wide
+
+# delete pod
+kubectl delete pod <pod_name>
+
+# create yaml file
+kubectl run redis --image=redis --dry-run=client -o yaml > redis.yaml
+
+# creaete pod
+kubectl create -f redis.yaml
