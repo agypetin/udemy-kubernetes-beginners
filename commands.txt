@@ -18,3 +18,19 @@ kubectl run redis --image=redis --dry-run=client -o yaml > redis.yaml
 
 # creaete pod
 kubectl create -f redis.yaml
+
+# update a paramétereket
+kubectle replace -f file.yml
+
+# update the replicaset
+# file-ban átirni a replicas: kulcsot
+kubectle replace -f file.yml
+
+kubectl scale --replicas=6 file.yml
+kubectl scale --replicas=6 replicaset myapp-replicaset
+
+# replicák számát adja vissz
+kubectl get replicaset
+
+# delete replicaset
+kubectl delete replicaset myapp-replicaset
