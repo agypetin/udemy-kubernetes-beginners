@@ -40,3 +40,17 @@ kubectl edit rs <name>
 
 #
 kubectl get all
+
+# update definition file
+kubectl apply -f file.yml
+kubectl set image dployment/myapp-dplocment nginx=nginx:1.9.1
+
+# status
+kubectl rollout status deployment/myapp-deployment
+kubectl rollout history deployment/myapp-deployment
+
+# rollback
+kubectl rollout undo deployment/myapp-deployment
+
+# record, deprecated, a history-nál feltünteti a parancsot
+... --record
