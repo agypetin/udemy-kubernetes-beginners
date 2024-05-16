@@ -37,3 +37,6 @@ kubectl delete replicaset myapp-replicaset
 
 # edit yaml
 kubectl edit rs <name>
+
+#
+kubectl get all
