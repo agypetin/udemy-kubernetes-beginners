@@ -54,3 +54,6 @@ kubectl rollout undo deployment/myapp-deployment
 
 # record, deprecated, a history-nál feltünteti a parancsot
 ... --record
+
+# kiadja a node ip-jét és portját amin elérhető a pod, lásd service-definition.yaml és deploymant.yaml = nginx kezdő oldal.
+minikube service myapp-service --url
